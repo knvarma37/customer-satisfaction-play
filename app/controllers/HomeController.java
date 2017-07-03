@@ -36,7 +36,7 @@ public class HomeController extends Controller {
      */
     public Result findSatisfaction(Integer timelimit) {
         Integer value = eatSatisfactionService.findMaxSatisfaction(timelimit);
-        return ok(String.valueOf(value));
+        return ok("Maximum satisfaction : " + String.valueOf(value));
     }
 
 }
